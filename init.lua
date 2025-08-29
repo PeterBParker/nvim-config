@@ -25,6 +25,14 @@ require("lazy").setup({
   { import = "plugins" },
 }, lazy_config)
 
+local cmp = require("cmp")
+cmp.setup({
+  sources = {
+    -- Copilot Source
+    { name = "copilot", group_index = 2 },
+  },
+})
+
 -- load theme
 dofile(vim.g.base46_cache .. "defaults")
 dofile(vim.g.base46_cache .. "statusline")
